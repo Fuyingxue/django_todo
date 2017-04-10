@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load staticfiles %}
+        <meta charset="utf-8">
+        <title>主页</title>
+        <link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link href="//cdn.bootcss.com/font-awesome/3.1.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/todo.css' %}">
+    </head>
+    <body>
+        <div class="container todo-content">
+            <h1 class="todo-title">Todo</h1>
+            <div class="input-group">
+                <input id="id-input-todo" class="form-control" type="text" name="task">
+                <span class="input-group-btn">
+                    <button id="id-button-add" class="btn btn-default" type="submit">添加 todo</button>
+                </span>
+            </div>
+            <div>
+                <table class="table table-hover todo-list">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>任务名称</th>
+                            <th>创建时间</th>
+                            <th>更新时间</th>
+                            <th>编辑</th>
+                            <th>删除</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <script src="{% static 'js/api.js' %}"></script>
+        <script src="{% static 'js/todo.js' %}"></script>
+    </body>
+</html>
